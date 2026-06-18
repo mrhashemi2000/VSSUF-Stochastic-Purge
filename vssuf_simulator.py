@@ -28,10 +28,10 @@ class VSSUFSimulator:
 
         while time < max_time:
             # Propensities
-            p_poly_U = self.species['U_monomer']  self.k_polymerization
-            p_poly_T = self.species['T_monomer']  self.k_polymerization
-            p_hyd_U = self.species['dsDNA_U']  self.k_hydrolysis_U
-            p_hyd_T = self.species['dsDNA_T']  self.k_hydrolysis_T
+            p_poly_U = self.species['U_monomer'] * self.k_polymerization
+            p_poly_T = self.species['T_monomer'] * self.k_polymerization
+            p_hyd_U = self.species['dsDNA_U'] * self.k_hydrolysis_U
+            p_hyd_T = self.species['dsDNA_T'] * self.k_hydrolysis_T
 
             total_p = p_poly_U + p_poly_T + p_hyd_U + p_hyd_T
             if total_p <= 0:
@@ -42,7 +42,7 @@ class VSSUFSimulator:
             time += dt
 
             # Event selection
-            r = np.random.rand()  total_p
+            r = np.random.rand() * total_p
             if r < p_poly_U:
                 self.species['dsDNA_U'] += 1
                 self.species['U_monomer'] -= 1
@@ -69,7 +69,7 @@ class VSSUFSimulator:
         return history
 
 def plot_vssuf_results(history):
-    plt.style.use('seaborn-v0_8-whitegrid')
+    plt.style.use('ggplot')
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 5))
 
     # Subplot A: Molecular Concentrations
@@ -92,8 +92,7 @@ def plot_vssuf_results(history):
     plt.tight_layout()
     plt.show()
 
-if name == "__main__":
+if __name__ == "__main__":
     sim = VSSUFSimulator(seed=101)
     results = sim.run(max_time=10000)
-
     plot_vssuf_results(results)
