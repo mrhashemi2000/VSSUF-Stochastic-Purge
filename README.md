@@ -1,4 +1,5 @@
-[![DOI](https://img.shields.io/badge/DOI-10.5281/zenodo.20733760-blue)](https://doi.org/10.5281/zenodo.20733760)
+[![DOI](https://img.shields.io/badge/DOI-10.5281/zenodo.20733760-blue)](https://doi.org/10.5281/zenodo.20733760) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ## Vent Stochasticity Seals Uracil's Fate: A Physical Model of Chemical Darwinism in the Origin of DNA
 
 ## Author: 
