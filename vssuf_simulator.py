@@ -5,7 +5,7 @@ class VSSUFSimulator:
     """
     Vent Stochasticity Seals Uracil's Fate (VSSUF)
     Physical Model: Arrhenius-calibrated Gillespie Simulation
-    Author: Seyed Reza Hashemi
+    Author: Seyed Mohammad Reza Hashemi (Reza Hashemi)
     """
     def __init__(self, seed=101, temperature_C=80):
         # Use a fixed seed for reproducibility
