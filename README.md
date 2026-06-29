@@ -43,7 +43,6 @@ Run the simulator:
 ## References
 
 - Lindahl, T. (1993). *Nature* 362, 709–715.
-- Ranjan, S. et al. (2019). *Nat. Astron.* 3, 140–142.
 - Becker, S. et al. (2019). *Science* 366, 76–82.
 - Hashemi, R. (2025). The Matter World Hypothesis: Chemical Darwinism Computational Simulation Origin of Life I-VII. Zenodo. https://doi.org/10.5281/zenodo.17650234
 
